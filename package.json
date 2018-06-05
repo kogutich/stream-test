@@ -4,9 +4,8 @@
   "main": "lib/index.js",
   "scripts": {
     "eslint": "eslint .",
-    "start": "rm -rf tmp && mkdir tmp && mkdir tmp/downloaded-videos && touch tmp/download.txt",
-    "precommit": "npm run eslint",
-    "start-download-videos": "node lib/download-process --count=10 --duration=short --query='funny dogs'"
+    "start": "rm -rf tmp && mkdir tmp && mkdir tmp/downloaded-videos && mkdir tmp/processed-videos && node lib/index.js --count=6 --duration=short --query='funny dogs'",
+    "precommit": "npm run eslint"
   },
   "author": "Denis Kogutich",
   "devDependencies": {
@@ -17,7 +16,6 @@
     "axios": "^0.18.0",
     "fluent-ffmpeg": "^2.1.2",
     "fs-extra": "^6.0.1",
-    "glob": "^7.1.2",
     "lodash": "^4.17.10",
     "minimist": "^1.2.0",
     "ytdl-core": "^0.20.4"
